@@ -1,0 +1,120 @@
+To creat a empty file  touch muthu
+to store a file we can use  vi filename (i command :wq!)
+
+
+Disk partition to mount a file    lsblk
+to view the available          df -hT
+After that give             reboot 
+
+
+Again login to the server       lsblk 
+Type                      cat -n /ect/fstab    to view the line present inside the file 
+then type                 vi /ect/fstab    
+
+
+
+
+How to Increase SUSe linux existing volume. 
+
+df -hT  to check the availablity
+
+Then check resize2fs package is available or not 
+
+sudo zypper install xfsprogs
+sudo xfs_growfs -d /sybase
+
+
+ <VirtualHost *:80>
+     ServerAdmin  admin@hrm.sandhata.com
+     DocumentRoot /var/www/html/hrm.sandhata.com
+     ServerName hrm.sandhata.com
+     ServerAlias www.hrm.sandhata.com
+     ErrorLog /var/www/html/hrm/logs/mantiserror.log
+     CustomLog /var/www/html/hrm/logs/mantisrequests.log common
+ </VirtualHost>
+
+
+
+
+Creating mongod replication 
+3 rd instance
+sudo vi /etc/mongod.conf
+    2  sudo service mongo restart
+    3  sudo reboot
+    4  sudo vi /etc/mongod.conf
+    5  sudo service mongod restart
+    6  mongo mongo2.domain.net --ssl --sslCAFile /etc/ssl/mongo_ssl/CA.pem --sslPEMKeyFile /etc/ssl/mongo_ssl/mclient.pem
+    7  sudo vi /etc/mongod.conf
+    8  sudo reboot
+    9  sudo service mongod restart
+   10  sudo vi /etc/mongod.conf
+   11  sudo service mongod restart
+   12  sudo reboot
+   13  sudo service mongod restart
+
+1st instance the root 
+  1  sudo mongod service restart
+    2  clear
+    3  sudo service mongod start
+    4  sudo vi /etc/mongod.conf
+    5  sudo service mongod restart
+    6  mongo mongo1.domain.net --ssl --sslCAFile /etc/ssl/mongo_ssl/CA.pem --sslPEMKeyFile /etc/ssl/mongo_ssl/mclient.pem
+    7  sudo vi /etc/mongod.conf
+    8  mongo mongo1.domain.net --ssl --sslCAFile /etc/ssl/mongo_ssl/CA.pem --sslPEMKeyFile /etc/ssl/mongo_ssl/mclient.pem
+    9  sudo vi /etc/mongod.conf
+   10  mongo mongo1.domain.net --ssl --sslCAFile /etc/ssl/mongo_ssl/CA.pem --sslPEMKeyFile /etc/ssl/mongo_ssl/mclient.pem
+   11  sudo vi /etc/mongod.conf
+   12  sudo service mongod restart
+   13
+   14  mongo -u admin -p changeme mongo1.domain.net/admin --ssl --sslCAFile /etc/ssl/mongo_ssl/CA.pem --sslPEMKeyFile /etc/ssl/mongo_ssl/mclient.pem
+   15  sudo vi /etc/mongod.conf
+   16  sudo service mongod restart
+   17  mongo -u admin -p changeme mongo1.domain.net/admin --ssl --sslCAFile /etc/ssl/mongo_ssl/CA.pem --sslPEMKeyFile /etc/ssl/mongo_ssl/mclient.pem
+
+
+
+
+
+
+Landing Zone 
+
+
+
+Log ,Security,Networking - whitelisting and this will go to aac vending mac  then dev ,prod, uat using transit gate way 
+
+network- igw,site to site,vpc,natgw
+
+transit gate way - use to allow all the resources 
+
+LOG - flow logs what ever the logs enabled will stord here 
+
+
+
+
+VFS Bolt 2.0 
+
+Status 
+ has been shared to the client.
+
+
+Hardning Scripts 
+
+
+     vi hardening.sh (creat file)
+
+     chmod 775 hardening.sh(File Execution)
+
+    ./hardening.sh (Excuting of the script)
+
+     cat cis_report.txt  (view only not to edit)
+
+     vi /etc/ssh/sshd_config (to checvk XF11 enabled or not)
+
+
+
+
+
+
+
+
+
