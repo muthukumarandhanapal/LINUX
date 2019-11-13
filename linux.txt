@@ -29,6 +29,13 @@ Then check resize2fs package is available or not
 sudo zypper install xfsprogs
 sudo xfs_growfs -d /sybase
 
+To Incease in a Amazon linux 2
+df -hT  to check the availablity
+lsblk to check 
+xfs_growfs -d /name of the directory
+
+
+
 
  <VirtualHost *:80>
      ServerAdmin  admin@hrm.sandhata.com
