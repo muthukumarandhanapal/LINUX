@@ -7,7 +7,10 @@ Disk partition to mount a file    lsblk
 to view the available          df -hT
 mkfs.xfs /dev/xvdf (To make a file system of newly added drive)
 After that give             reboot 
-Permanant mounting ( /etc/fstab/dirname )
+(Permanant mounting)  /etc/fstab/dirname 
+(for find UUid)  blkid /dev/xvdf 
+
+ /dev/xvdf                                   /pavan       xfs    defaults 0 0  (fpr permanent mounting)
 
 
 Again login to the server       lsblk 
