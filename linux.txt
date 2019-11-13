@@ -1,10 +1,13 @@
-To creat a empty file  touch muthu
+(To creat a empty file)  touch muthu
+(To create directory) mkdir muthu
 to store a file we can use  vi filename (i command :wq!)
 
 
 Disk partition to mount a file    lsblk
 to view the available          df -hT
+mkfs.xfs /dev/xvdf (To make a file system of newly added drive)
 After that give             reboot 
+Permanant mounting ( /etc/fstab/dirname )
 
 
 Again login to the server       lsblk 
